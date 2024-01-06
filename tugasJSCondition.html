@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+
+<!-- Form untuk memasukkan nilai x dan y -->
+<form>
+  <label for="inputX">Masukkan nilai x:</label>
+  <input type="number" id="inputX" name="inputX" required>
+
+  <label for="inputY">Masukkan nilai y:</label>
+  <input type="number" id="inputY" name="inputY" required>
+
+  <button type="button" onclick="compareValues()">Submit!</button>
+</form>
+
+<!-- Tempat untuk menampilkan hasil perbandingan -->
+<div id="result"></div>
+
+<script>
+  // JavaScript code
+  function compareValues() {
+    // Mendapatkan nilai x dan y dari input pengguna
+    var x = parseFloat(document.getElementById("inputX").value);
+    var y = parseFloat(document.getElementById("inputY").value);
+
+    // Membandingkan nilai x dan y
+    if (x > y) {
+      // Menampilkan pesan jika x lebih besar dari y
+      document.getElementById("result").innerHTML = "Yeay berhasil!";
+    } else {
+      // Menampilkan pesan jika x tidak lebih besar dari y
+      document.getElementById("result").innerHTML = "Oops, Coba Lagi!";
+    }
+  }
+</script>
+
+</body>
+</html>
